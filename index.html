@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicionário de Dados Interativo - Kallan Calçados</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-area">
+            <i class="fa-solid fa-database"></i>
+            <h1>Dicionário de Dados - Kallan Calçados</h1>
+        </div>
+        <div class="header-actions">
+            <button id="download-doc-btn" class="btn-primary">
+                <i class="fa-solid fa-file-arrow-down"></i> Baixar Requisitos
+            </button>
+            <button id="open-der-modal" class="btn-secondary">
+                <i class="fa-solid fa-project-diagram"></i> Visualizar DER
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro-card">
+            <h2>Governança e Data Literacy</h2>
+            <p>Este dicionário de dados consolida a arquitetura relacional do Sistema de Gestão Operacional e Vendas da <strong>Kallan Calçados</strong>[cite: 22]. Alinhado aos padrões DMBOK e COBIT, o projeto garante a integridade transacional, rastreabilidade de auditoria e conformidade com a LGPD (Lei nº 13.709/2018)[cite: 24]. Utilize a barra abaixo para pesquisar tabelas por nome.</p>
+        </section>
+
+        <div class="search-container">
+            <i class="fa-solid fa-search"></i>
+            <input type="text" id="search-input" placeholder="Pesquisar tabela (ex: cliente, venda, produto)...">
+        </div>
+
+        <div id="tables-container" class="tables-grid"></div>
+    </main>
+
+    <div id="der-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Diagrama Entidade-Relacionamento (DER)</h3>
+                <button id="close-modal" class="btn-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="der-controls">
+                    <button id="zoom-in"><i class="fa-solid fa-magnifying-glass-plus"></i> Zoom +</button>
+                    <button id="zoom-out"><i class="fa-solid fa-magnifying-glass-minus"></i> Zoom -</button>
+                    <button id="reset-zoom"><i class="fa-solid fa-rotate"></i> Redefinir</button>
+                </div>
+                <div id="der-viewport">
+                    <img id="der-image" src="assets/der.jpg" alt="Diagrama Entidade-Relacionamento">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Kallan Calçados - Grupo 5 | UNICID Análise e Desenvolvimento de Sistemas[cite: 22]</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
